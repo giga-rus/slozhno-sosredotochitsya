@@ -7,7 +7,13 @@
     "check": "prettier --check './src/**/*.{html,css,js}'",
     "format": "prettier --write './src/**/*.{html,css,js}'",
     "lint": "stylelint ./src/**/*.css",
-    "lintfix": "stylelint ./src/**/*.css --fix"
+    "lintfix": "stylelint ./src/**/*.css --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix",
+    "build": "gulp build",
+    "dev": "gulp",
+    "fixAndBuild": "npm run fixAll && npm run build",
+    "lintfixAndPush": "npm run fixAll && git add . && git commit -m 'подготовили к публикации' && git push"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +24,15 @@
     "gulp": "^5.0.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "postcss": "^8.5.2",
     "prettier": "^3.5.0",
     "stylelint": "^16.14.1"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

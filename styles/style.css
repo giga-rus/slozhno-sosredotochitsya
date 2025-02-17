@@ -2,12 +2,10 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  inline-size: 375px;
   block-size: 100%;
   margin: auto;
   font-family: var(--font-family);
   background-color: var(--background-color);
-
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -19,7 +17,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  block-size: 668px;
+  min-block-size: 668px;
+  block-size: 100vh;
   padding: 10px;
 }
 
@@ -143,13 +142,18 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-weight: 700;
 }
 
 .block__title {
   font-size: 18px;
   font-weight: 700;
   color: var(--accent-color);
+}
+
+.block__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--subtitle-color);
 }
 
 .cards {
@@ -170,8 +174,71 @@
   color: var(--subtitle-color);
 }
 
+.card__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--subtitle-color);
+}
+
 .card__text {
   font-size: 18px;
   font-weight: 400;
   color: var(--text-color);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 668px;
+  padding: 10px;
+}
+
+.footer__title {
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 95.7px;
+  margin-bottom: 55px;
+}
+
+.link {
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  border: 1px solid currentColor;
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+}
+
+@media (width >= 1024px) {
 }

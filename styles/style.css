@@ -18,7 +18,6 @@
   display: flex;
   flex-direction: column;
   min-block-size: 668px;
-  max-block-size: 1024px;
   block-size: 100vh;
   padding: 10px;
 }
@@ -110,16 +109,19 @@
   pointer-events: none;
 }
 
-.header__title {
+.title {
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
   font-weight: 700;
   font-size: 116px;
   line-height: 95.7px;
+}
+
+.header__title {
+  text-shadow: 4px 4px 0 var(--accent-color);
   margin-bottom: 55px;
 }
 
-.header__text {
+.text {
   font-size: 18px;
   line-height: 23.4px;
   font-weight: 700;
@@ -157,28 +159,17 @@
   color: var(--title-block-color);
 }
 
-.block__subtitle {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--subtitle-color);
-}
-
 .cards {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.card__title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--subtitle-color);
 }
 
 .card__subtitle {
@@ -211,18 +202,12 @@
   justify-content: center;
   align-items: center;
   min-block-size: 668px;
-  max-block-size: 1024px;
   block-size: 100vh;
   padding: 10px;
 }
 
 .footer__title {
-  color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
-  font-weight: 700;
-  font-size: 116px;
-  line-height: 95.7px;
-  margin-bottom: 55px;
 }
 
 .link {
@@ -267,9 +252,12 @@
     margin: 172px 0 173px;
   }
 
-  .header__title {
+  .title {
     font-size: 120px;
     line-height: 99px;
+  }
+
+  .header__title {
     margin-left: -20px;
     margin-bottom: 162px;
   }
@@ -340,10 +328,6 @@
 }
 
 @media (width >= 1024px) {
-  .header {
-    max-block-size: 768px;
-  }
-
   .header__theme-menu {
     margin: 0 0 273px;
   }
@@ -353,9 +337,12 @@
     justify-content: center;
   }
 
-  .header__title {
+  .title {
     font-size: 157px;
     line-height: 129.53px;
+  }
+
+  .header__title {
     margin-bottom: 114px;
     text-shadow: 4px 4px 0 var(--accent-title-shadow);
   }
@@ -374,10 +361,7 @@
 
   .block-second .card {
     min-inline-size: 315px;
-  }
-
-  .footer {
-    max-block-size: 768px;
+    flex: 1;
   }
 
   .footer__title {

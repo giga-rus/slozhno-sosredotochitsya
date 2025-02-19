@@ -5,13 +5,15 @@
 
 :root {
   --accent-color: #ff0070;
-  --accent-color-opacity40: #ff007066;
+  --accent-title-shadow: #ff0070;
   --title-color: #db00ff;
   --subtitle-color: #000028;
+  --title-block-color: #ff0070;
   --text-color: #f1b2ce;
   --font-family: 'IBM Plex Mono', sans-serif;
-  --font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --font-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --background-image: url(../images/cover-image-dark.png);
   --background-color: #000028;
+  --accent-color-opacity40: #ff007066;
+  --font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 }

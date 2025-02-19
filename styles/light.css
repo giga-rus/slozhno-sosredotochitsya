@@ -10,4 +10,38 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff8dcb;
+  --accent-title-shadow: #ff0070;
+  --title-color: #ffc2e6;
+  --subtitle-color: #353430;
+  --title-block-color: #353430;
+  --text-color: #353430;
+  --background-image: url(../images/cover-image-light.png);
+  --background-color: #fff1f7;
+  --accent-color-opacity40: #32312d66;
+}
+
+.page.theme_light .header__lamp {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --accent-title-shadow: #ff0070;
+    --title-color: #ffc2e6;
+    --subtitle-color: #353430;
+    --title-block-color: #353430;
+    --text-color: #353430;
+    --background-color: #fff1f7;
+    --accent-color-opacity40: #32312d66;
+  }
+
+  .page {
+    background-color: var(--background-color);
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .header__lamp {
+    display: none;
+  }
 }
